@@ -156,7 +156,7 @@ Tampilan tetap rapi saat window di-resize.
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/USERNAME/T7-week12.git
+git clone https://github.com/unproduktif/T7-week12.git
 ```
 
 ---
