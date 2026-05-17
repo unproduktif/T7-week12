@@ -52,8 +52,18 @@ class MainWindow(QMainWindow):
                 "data/supermarket_sales.csv"
             )
 
-            self.df.columns = (
-                self.df.columns.str.strip()
+            self.df.rename(
+                columns={
+                    "Customer type": "Customer Type",
+                    "Product line": "Product Line",
+                    "Unit price": "Unit Price",
+                    "Tax 5%": "Tax 5%",
+                    "gross margin percentage": "Gross Margin Percentage",
+                    "gross income": "Gross Income",
+                    "cogs": "COGS",
+                    "Rating": "Customer Rating"
+                },
+                inplace=True
             )
 
             if (
@@ -165,7 +175,7 @@ class MainWindow(QMainWindow):
             ["All Customer"] +
             sorted(
                 self.df[
-                    "Customer type"
+                    "Customer Type"
                 ].unique()
             )
         )
@@ -416,7 +426,7 @@ class MainWindow(QMainWindow):
         if customer != "All Customer":
 
             df = df[
-                df["Customer type"] == customer
+                df["Customer Type"] == customer
             ]
 
         if gender != "All Gender":
@@ -485,7 +495,7 @@ class MainWindow(QMainWindow):
         )
 
         avg_rating = (
-            self.filtered_df["Rating"].mean()
+            self.filtered_df["Customer Rating"].mean()
         )
 
         self.sales_card.setText(
@@ -506,7 +516,7 @@ class MainWindow(QMainWindow):
 
         product_sales = (
             self.filtered_df.groupby(
-                "Product line"
+                "Product Line"
             )["Sales"]
             .sum()
             .sort_values()
@@ -596,7 +606,7 @@ class MainWindow(QMainWindow):
 
             product_sales = (
                 self.filtered_df.groupby(
-                    "Product line"
+                    "Product Line"
                 )["Sales"]
                 .sum()
                 .sort_values()

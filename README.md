@@ -8,7 +8,7 @@ Dashboard visualisasi data berbasis **PySide6** dan **Matplotlib** untuk menampi
 
 - **Nama** : Dodi Wijaya  
 - **NIM** : F1D02310047  
-- **Kelas** : Pemrograman Visual
+- **Kelas** : Pemrograman Visual D
 
 ---
 
@@ -58,7 +58,8 @@ T7-week12/
 ├── screenshots/
 │   ├── dashboard.png
 │   ├── table.png
-│   └── filter.png
+│   ├── filter.png
+|   └── export.png
 │
 ├── requirements.txt
 │
@@ -77,15 +78,23 @@ Dataset berisi transaksi penjualan supermarket dengan kolom seperti:
 
 | Kolom | Keterangan |
 |---|---|
-| Invoice ID | ID transaksi |
+| Invoice ID | ID unik transaksi |
+| Branch | Cabang supermarket |
 | City | Kota cabang supermarket |
-| Customer type | Jenis pelanggan |
+| Customer Type | Jenis pelanggan |
 | Gender | Jenis kelamin pelanggan |
-| Product line | Kategori produk |
-| Quantity | Jumlah produk |
-| Sales | Total transaksi |
+| Product Line | Kategori produk |
+| Unit Price | Harga per item |
+| Quantity | Jumlah produk dibeli |
+| Tax 5% | Pajak transaksi |
+| Sales | Total transaksi termasuk pajak |
+| Date | Tanggal transaksi |
+| Time | Waktu transaksi |
 | Payment | Metode pembayaran |
-| Rating | Rating pelanggan |
+| COGS | Cost of Goods Sold |
+| Gross Margin Percentage | Persentase margin keuntungan |
+| Gross Income | Keuntungan transaksi |
+| Customer Rating | Rating pelanggan |
 
 ---
 
